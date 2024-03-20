@@ -1,7 +1,7 @@
 
 # Conhecendo a Linguagem Python 
 
-Este conteúdo foi criado seguindo o curso de Python da [Dio](dio.me) para o Bootcampo de Python Data Analytics da Squadio.
+Este conteúdo foi criado seguindo o curso de Python da [Dio](dio.me) para o Bootcamp de Python Data Analytics da Squadio.
 
 ## Tipos de Dados
 
