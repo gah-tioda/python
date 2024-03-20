@@ -23,7 +23,7 @@ _X tipo de dado consome 24 bytes de armazenamento_
 | Numérico  | int, float, complex  |
 | Sequência | list, tuple, range |
 | Mapa (chave-valor) | dict |
-| Coleção (não permitem valores repetidos)| set, fronzenset |
+| Coleção (não permitem valores repetidos)| set, frozenset |
 | Booleano | bool |
 | Binário | byes, bytearray, memoryview |
 
