@@ -90,4 +90,66 @@ print("Valor de Y = " + str(y), end="\n")
 
 >>>Valor de X = 60
 Valor de Y = 51.0
+<<<<<<< HEAD
+=======
+~~~
+
+- Operadores de Comparação
+
+Operadores utilizados para comparação de valores (dois valores ou mais).
+
+O retorno das comparações é sempre um valor _bool_ (booleano - `True` ou `False`)
+
+Tipo   | Sinal
+--------- | ------
+Igualdade | `==`
+Diferença | `!=`
+Maior | `>`
+Maior ou igual | `>=`
+Menor | `<`
+Menor ou igual | `<=`
+
+**Exemplos**:
+
+_Igualdade_
+~~~python
+saldo = 450
+saque = 200
+
+print(saldo == saque)
+>>> False
+~~~
+
+_Diferença_
+~~~python
+saldo = 450
+saque = 200
+
+print(saldo != saque)
+>>> True
+~~~
+
+_Maior que/ maior ou igual_
+~~~python
+saldo = 450
+saque = 200
+
+print(saldo > saque)
+>>> True
+
+print(saldo >= saque)
+>>> True
+~~~
+
+_Menor que/ menor ou igual_
+~~~python
+saldo = 450
+saque = 200
+
+print(saldo < saque)
+>>> False
+
+print(saldo <= saque)
+>>> False
+>>>>>>> 8db5fa6 (add operadores_python folder with exercise and README file)
 ~~~
