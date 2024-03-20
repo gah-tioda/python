@@ -151,9 +151,4 @@ print(saldo < saque)
 
 print(saldo <= saque)
 >>> False
-<<<<<<< HEAD
->>>>>>> 8db5fa6 (README updated with comparison operators text and operadores_comparacao.py file created.)
 ~~~
-=======
-~~~
->>>>>>> de2da67 (Update README.md)
