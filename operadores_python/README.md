@@ -150,9 +150,5 @@ print(saldo < saque)
 >>> False
 
 print(saldo <= saque)
-<<<<<<< Updated upstream
 >>> False
 ~~~
-=======
->>> False
->>>>>>> Stashed changes
