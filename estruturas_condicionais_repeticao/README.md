@@ -147,3 +147,148 @@ status = "Sucesso" if saldo >= saque else "Falha"
 
 print(f"{status} ao realizar o saque!")
 ~~~
+
+### _Estruturas de repetição_
+
+As estruturas de repetição são utilizadas para repetir um trecho de código um determinado número de vezes. Esse número pode ser conhecido previamente ou determinado através de uma expressão lógica. Ou seja, um código pode ser executado quantas vezes definirmos ou até satisfazer uma determinada condição.
+
+- `for`
+
+O comando `for` é usado para percorrer um objeto iterável (string, por exemplo). Faz sentido usar a estrutura quando sabemos o número exato de vezes que nosso bloco de código precisa ser executado. Ou quando queremos percorrer um objeto iterável. 
+
+Exemplo: 
+
+~~~python
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto: 
+    if letra.upper() in VOGAIS:
+        print(letra, end="")
+
+print() #adiciona uma quebra de linha
+~~~
+
+- `for`/`else`
+
+A única diferença é que ao final da execução, ele executará o bloco de código do `else`.
+
+Exemplo:
+
+~~~python
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto: 
+    if letra.upper() in VOGAIS:
+        print(letra, end="")
+else: 
+    print() #adiciona uma quebra de linha
+    print("Executa no final do laço")
+~~~
+
+- Função `range`
+
+Utilizada muito com o `for` para o controle de iterações, é uma função built-in do Python. Ela produz uma sequência de números inteiros a partir de um ínicio (inclusivo - considera na sequência) para um fim (exclusivo - fica fora da sequência). Se usarmos `range(i,j)` será produzido:
+
+i, i+1, i+2, i+3, ..., j-1
+
+Ela recebe três argumentos: stop (obrigatório), start (opcional) e step (opcional - pula de x em x vezes a sequência)
+
+Exemplo com o `for`:
+
+~~~python
+for numero in range(0,11):
+    print(numero, end=" ")
+
+>>> 0 1 2 3 4 5 6 7 8 9 10
+
+#exibindo a tabuada do 5
+
+for numero in range(0,51,5):
+    print(numero, end=" ")
+
+>>> 0 5 10 15 20 25 30 35 40 45 50
+~~~
+
+- `while`
+
+Utilizado para repetir um bloco de código várias vezes. Faz sentido usar o while quando não sabemos o número exato de vezes que o bloco de código deve ser executado.
+
+Exemplo:
+
+~~~python
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("Informe uma opção: [1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+~~~
+
+- `while`/`else`
+
+Idêntico ao anterior mas com o else ao final da estrutura. 
+
+Exemplo:
+
+~~~python
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("Informe uma opção: [1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+else:
+    print("Obrigado por usar nosso sistema, até logo!")
+~~~
+
+- `break`
+
+Comando que interrompe uma repetição quando utilizamos o `while`. A execução é interrompida quando alguma condição é satisfeita.
+
+Exemplo:
+
+~~~python
+while True:
+    numero = int(input("Informe um número: "))
+
+    if numero == 10:
+        break
+
+    print(numero)
+
+# É possível usar com for também
+    
+for numero in range(100):
+
+    if numero == 10:
+        break
+
+    print(numero, end=" ")
+~~~
+
+- `continue`
+
+Comando para desviarmos de alguma situação específica dentro do laço. Ou seja, ele ignora a condição e continua rodando os outros comandos. 
+
+Exemplo: 
+
+~~~python
+#uso do continue, exemplo de programa para apenas exibir números ímpares
+
+for numero in range(100):
+
+    if numero % 2 == 0:
+        continue
+
+    print(numero, end=" ")
+
+>>> 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99
+~~~
