@@ -77,3 +77,73 @@ if saldo < saque:
     print("Saldo insuficiente!")
 ~~~
 
+- `if`/`else`
+
+Para criar uma estrutura condicional com dois valores, podemos utilizar as palavras reservadas `if` e `else`. Se a expressão lógica for verdadeira, será executada o bloco de código do if. Caso contrário, será executado o bloco do else.
+
+Exemplo:
+
+~~~python
+saldo = 2000.0
+saque = float(input("Informe o valor do saque: "))
+
+if saldo >= saque: 
+    print("Realizando saque!")
+else:
+    print("Saldo insuficiente!")
+~~~
+
+- `if`/`elif`/`else`
+
+Em alguns casos, queremos mais de dois desvios, para isso, podemos utilizar a palavra reservada `elif`. O elif é composto por uma nova expressão lógica que será testada e, caso retorne verdadeiro, será executado o respectivo bloco de código. Não existe número máximo de elifs que podemos usar, porém, é recomendado não criar grandes estruturas condicionais pois podem aumentar a complexidade do código. 
+
+Exemplo:
+
+~~~python
+saldo = 2000.0
+opcao = int(input("Informe uma opção: [1] Sacar \n[2] Extrato: "))
+
+if opcao == 1: 
+    valor = float(input("Informe o valor do saque: "))
+elif opcao == 2:
+    print("Exibindo extrato...")
+else:
+    print("Opção inválida")
+~~~
+
+- `if` aninhado
+
+Podemos criar estruturas condicionais aninhadas, para isso, basta adicionar estruturas if/elif/else dentro do bloco de código destas estruturas.
+
+Exemplo:
+
+~~~python
+if conta_normal:
+    if saldo >= saque:
+        print("Saque realizado")
+    elif saque <= (saldo + cheque_especial):
+        print("Saque realizado com cheque especial")
+    else:
+        print("Não foi possível realizar o saque, saldo insuficiente")
+elif conta_universitaria:
+    if saldo >= saque:
+        print("Saque realizado")
+    else:
+        print("Saldo insuficiente!")
+else: 
+    print("Sistema não reconheceu o tipo, entre em contato com o gerente.")
+~~~
+
+- `if` ternário
+
+Este caso permite escrevermos uma condição em uma única linha. Ele é composto por três partes, a primeira é o retorno caso a expressão retorne `verdadeiro`, a segunda é a expressão lógica, e a terceira é o retorno caso a expressão não seja atendida. 
+
+Ideal para validações mais simples, deixando o código mais legível e facilidade na manutenção.
+
+Exemplo:
+
+~~~python
+status = "Sucesso" if saldo >= saque else "Falha"
+
+print(f"{status} ao realizar o saque!")
+~~~
