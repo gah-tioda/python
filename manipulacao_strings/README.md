@@ -149,3 +149,37 @@ print(f"Valor de PI: {pi: .2f}")
 print(f"Valor de PI: {pi:10.2f}")
 >>> "Valor de PI:            3.14"
 ~~~
+
+###_Fatiamento de Strings_
+
+O fatiamento de strings é uma técnica que retorna substrings (partes da string original), informando início (start), fim (stop) e passo (step): [start: stop[,step]]
+
+~~~python
+nome = "Gabriel Antonini"
+
+nome[0]
+>>> "G"
+
+nome[:8]
+>>> "Gabriel"
+
+nome[8:]
+>>> "Antonini"
+
+nome[8:12]
+>>> "Anto"
+
+nome[8:14:2]
+>>> "Atn"
+
+nome[:]
+>>> "Gabriel Antonini"
+
+#Invertida
+nome[::-1]
+>>> "ininotnA leirbaG"
+
+#Última letra string
+nome[-1]
+>>> "i"
+~~~
