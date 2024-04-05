@@ -150,7 +150,7 @@ print(f"Valor de PI: {pi:10.2f}")
 >>> "Valor de PI:            3.14"
 ~~~
 
-###_Fatiamento de Strings_
+### _Fatiamento de Strings_
 
 O fatiamento de strings é uma técnica que retorna substrings (partes da string original), informando início (start), fim (stop) e passo (step): [start: stop[,step]]
 
