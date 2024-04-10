@@ -183,3 +183,20 @@ nome[::-1]
 nome[-1]
 >>> "i"
 ~~~
+
+### _Strings de múltiplas linhas_
+
+São definidas quando usamos 3 aspas simples ou duplas durante a atribuição. Podem ocupar várias linhas de código e todos os espaços em branco são incluídos na string final (quebras de linha, espaços maiores entre palavras, etc.)
+
+~~~python
+nome = "Gabriel"
+
+mensagem = f"""
+Olá meu nome é {nome},
+Eu estou aprendendo Python
+"""
+mensagem_aspas_simples = f'''
+Olá meu nome é {nome},
+Eu estou aprendendo Python
+'''
+~~~
