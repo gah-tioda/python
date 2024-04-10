@@ -21,3 +21,7 @@ numeros = list(range(10))
 
 carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
 ~~~
+
+### _Acesso direto_
+
+A lista é uma sequência, portando, podemos acessar seus dados utilizando índices. Contamos o índice de determinada sequência a partir do zero.
