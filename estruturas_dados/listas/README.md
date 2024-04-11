@@ -242,3 +242,57 @@ linguagens.remove("C")
 
 print(linguagens) #["Python", "JS", "Java", "C#"]
 ~~~
+
+`reverse`
+
+Ele transpõe a lista, espelha ou coloca ela em uma sequência contrária.
+
+~~~python
+linguagens = ["Python", "JS", "C", "Java", "C#"]
+
+linguagens.reverse()
+
+print(linguagens) #["C#", "Java", "C", "JS", "Python"]
+~~~
+
+`sort`
+
+Função que ordena a lista em uma sequência alfabética por padrão, mas podemos usar outros argumentos, como o `reverse=True`, que além de ser alfabética, será de ao contrária e; personalizada com o parâmetro `key`, usando, por exemplo, uma função anônima `lambda`.
+
+Lembrando que o sort sempre inicia a leitura da lista da esquerda pra direita, então dependendo dos parâmetros indicados na função, um resultado pode ser diferente.
+
+~~~python
+linguagens = ["Python", "JS", "C", "Java", "Csharp"]
+linguagens.sort() # ["C", "Csharp", "Java", "JS", "Python"]
+
+linguagens = ["Python", "JS", "C", "Java", "Csharp"]
+linguagens.sort(reverse=True) # ["Python", "JS", "Java", "Csharp", "C"]
+
+linguagens = ["Python", "JS", "C", "Java", "Csharp"] #ordenando pelo tamanho da palavra
+linguagens.sort(key=lambda x: len(x)) # ["C", "JS", "Java", "Python", "Csharp"]
+
+linguagens = ["Python", "JS", "C", "Java", "Csharp"] #ordenando pelo tamanho da palavra e invertendo a sequência
+linguagens.sort(key=lambda x: len(x), reverse=True) # ["Python", "Csharp", "Java", "JS", "C"]
+~~~
+
+`len`
+
+Ele informa o tamanho dos objetos.
+
+~~~python
+linguagens = ["Python", "JS", "C", "Java", "Csharp"]
+
+linguagens.len() # 5 é o tamanho da lista
+~~~
+
+`sorted`
+
+É a mesma coisa que o sort, mas é uma função built-in do python. 
+
+~~~python
+linguagens = ["Python", "JS", "C", "Java", "Csharp"]
+
+print(sorted(linguagens, key=lambda x: len(x))) # ["C", "JS", "Java", "Python", "Csharp"]
+print(sorted(linguagens, key=lambda x: len(x), reverse=True)) # ["Python", "Csharp", "Java", "JS", "C"]
+print(sorted(linguagens)) #["C", "Csharp", "Java", "JS", "Python"]
+~~~
