@@ -233,7 +233,7 @@ linguagens.index(0) # Python
 
 `remove`
 
-Segunda forma de remover objetos da lista. Ao invés do índice, passamos o valor do objeto em si. 
+Segunda forma de remover objetos da lista. Ao invés do índice, passamos o valor do objeto em si. Ele remove apenas a primeira ocorrência que encontrar. 
 
 ~~~python
 linguagens = ["Python", "JS", "C", "Java", "C#"]
