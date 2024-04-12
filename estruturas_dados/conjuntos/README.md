@@ -54,6 +54,10 @@ Todas as operações matemáticas que são realizadas com conjuntos podem ser fe
 
 `{}.union`
 
+Junta todos os elementos.
+
+![alt text](image-5.png)
+
 ~~~python
 conjunto_a = {1, 2}
 conjunto_b = {3, 4}
@@ -64,6 +68,8 @@ conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
 `{}.intersection`
 
 Retorna os valores que se conectam, que são iguais entre os dois conjuntos. 
+
+![alt text](image-4.png)
 
 ~~~python
 conjunto_a = {1, 2, 3}
