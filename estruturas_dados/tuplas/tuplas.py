@@ -10,3 +10,6 @@ frutas[0]
 frutas[1]
 frutas[-1]
 frutas[-3]
+
+carros = ("gol")
+print(isinstance(carros, tuple))
