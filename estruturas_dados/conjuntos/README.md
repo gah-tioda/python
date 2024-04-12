@@ -118,3 +118,127 @@ conjunto_b = {4, 1, 2, 5, 6, 3}
 conjunto_a.issubset(conjunto_b) # True
 conjunto_b.issubset(conjunto_a) # False
 ~~~
+
+`{}.issuperset`
+
+"O contrário do subset", ele verifica se todos os elementos de B estão contidos em A. Ou seja, um superconjunto de A.
+
+![alt text](image-6.png)
+
+~~~python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issuperset(conjunto_b) # False
+conjunto_b.issuperset(conjunto_a) # True
+~~~
+
+`{}.isdisjoint`
+
+Operação de conjunto disjunto, ou seja, são conjuntos que não se juntam/se conectam/possui intersecção. 
+
+![alt text](image-7.png)
+
+~~~python
+conjunto_a = {1, 2, 3, 4, 5}
+conjunto_b = {6, 7, 8, 9}
+conjunto_c = {1, 0}
+
+conjunto_a.isdisjoint(conjunto_b) # True - são totalmente diferentes
+conjunto_b.isdisjoint(conjunto_c) # False - se conectam através do 1
+~~~
+
+`{}.add`
+
+Adiciona um elemento ao conjunto, **se já não houver**.
+
+~~~python
+sorteio = {1, 23}
+
+sorteio.add(25) # {1, 23, 25}
+sorteio.add(42) # {1, 23, 25, 42}
+sorteio.add(25) # {1, 23, 25, 42}
+~~~
+
+`{}.clear`
+
+Limpa o conjunto todo.
+
+~~~python
+sorteio = {1, 23}
+
+sorteio # {1, 23}
+sorteio.clear() # {}
+sorteio # {}
+~~~
+
+`{}.copy`
+
+Cria uma cópia do conjunto. Caso seja modificado a variável principal a cópia não é alterada. 
+
+~~~python
+sorteio = {1, 23}
+
+sorteio # {1, 23}
+sorteio.copy()
+sorteio # {1, 23}
+~~~
+
+`{}.discard`
+
+Remove os valores que existirem dentro do conjunto e, caso não exista, não fará nenhuma alteração.
+
+~~~python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+numeros.discard(1)
+numeros.discard(45)
+numeros # {2, 3, 4, 5, 6, 7, 8, 9, 0}
+~~~
+
+`{}.pop`
+
+Remove os elementos conforme a sequência da pilha, possui o comportamento de começar pela esquerda para direita (do começo da sequência para o fim)
+
+~~~python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.discard() # 0
+numeros.discard() # 1
+numeros # {2, 3, 4, 5, 6, 7, 8, 9}
+~~~
+
+`{}.remove`
+
+Mesmo comportamento do `discard`, contudo, caso o elemento inserido como argumento não existir no conjunto, a execução resultará em **erro**, enquanto o `discard` continua executando normalmente e não faz nenhuma alteração.
+
+~~~python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.remove(0) # 0
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+~~~
+
+`len`
+
+Retorna o tamanho do conjunto.
+
+~~~python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+len(numeros) # 10 - pois ele só contabiliza os valores únicos e remove os duplicados.
+~~~
+
+`in`
+
+Serve para verificarmos um valor dentro de um conjunto, retorna um booleano.
+
+~~~python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+1 in numeros # True
+10 in numeros # False
+~~~
