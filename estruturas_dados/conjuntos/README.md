@@ -49,3 +49,66 @@ for indice, carro in enumerate(carros):
 ~~~
 
 ### _Métodos da classe_ `set`
+
+Todas as operações matemáticas que são realizadas com conjuntos podem ser feitas com o `set` em Python.
+
+`{}.union`
+
+~~~python
+conjunto_a = {1, 2}
+conjunto_b = {3, 4}
+
+conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
+~~~
+
+`{}.intersection`
+
+Retorna os valores que se conectam, que são iguais entre os dois conjuntos. 
+
+~~~python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.union(conjunto_b) # {2, 3}
+~~~
+
+`{}.difference`
+
+Retorna o valor diferente que tem no conjunto A em relação ao B e vice-versa.
+
+![alt text](image-3.png)
+
+~~~python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.difference(conjunto_b) # {1}
+conjunto_b.difference(conjunto_a) # {4}
+~~~
+
+`{}.symmetric_difference`
+
+Retorna os valores diferentes da intersecção, valores que são divergentes entre os dois conjuntos.
+
+![alt text](image-2.png)
+
+~~~python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.symmetric_difference(conjunto_b) # {1, 4}
+~~~
+
+`{}.issubset`
+
+Retorna um valor booleano comparando se os valores de conjunto A estão contidos no B e vice-versa.
+
+![alt text](image-1.png)
+
+~~~python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issubset(conjunto_b) # True
+conjunto_b.issubset(conjunto_a) # False
+~~~
