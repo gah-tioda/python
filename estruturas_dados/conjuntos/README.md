@@ -26,7 +26,7 @@ numeros = list(numeros)
 print(numeros[0]) # 1
 ~~~
 
-### _Iterar conjuntos _
+### _Iterar conjuntos_
 
 A forma mais comum para percorrer os dados de um conjunto é utilizando o `for`.
 
