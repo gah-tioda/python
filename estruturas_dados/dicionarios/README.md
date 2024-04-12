@@ -247,6 +247,8 @@ contatos = {
 
 Outra forma de remover um valor de um dicionário. Passamos para o método o objeto que queremos remover.
 
+Se passarmos apenas o nome do dicionário, apaga ele inteiro.
+
 ~~~python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
