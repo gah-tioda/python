@@ -12,7 +12,7 @@ exibir_resultado(10, 10, somar) # O resultado da operação é = 20
 exibir_resultado(10, 10, subtrair) # O resultado da operação é = 0
 
 '''No exemplo abaixo vemos que se utilizassemos um append diretamente na variável dentro da função (local)
-consequentemente atualizaria a variável externa (global). Para contornar isso, criamos uma cópia da lista global
+consequentemente atualizaria a variável externa (global) por referência. Para contornar isso, criamos uma cópia da lista global
 para que as alterações apenas reflitam na cópia localmente.
 '''
 
