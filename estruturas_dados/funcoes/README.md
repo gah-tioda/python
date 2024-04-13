@@ -127,3 +127,41 @@ criar_carro("Palio", 1999, "ABC-1234", marca="Fiat", motor="1.0", combustivel="G
 
 criar_carro(modelo="Palio", ano=1999, placa="ABC-1234", marca="Fiat", motor="1.0", combustivel="Gasolina") # inválido
 ~~~
+
+### _Objetos de primeira classe_
+
+Em Python tudo é objeto, dessa forma, **funções também são objetos**, o que as tornam objetos de primeira classe. Com isso, podemos **atribuir funções a variáveis, passá-las como parâmetros para funções, usá-las como valores em estruturas de dados** (listas, tuplas, dicionários, etc) e usar como valor de retorno para uma função (closures).
+
+Veja que no exemplo abaixo, não necessariamente chamo a função `somar`, mas a coloco como parâmetro para a função `exibir_resultado`, ou seja, quem executará a função somar será a `exibir_resultado`.
+
+~~~python
+def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def exibir_resultado(a, b, funcao):
+    resultado = funcao(a, b)
+    print(f"O resultado da operação é = {resultado}")
+
+exibir_resultado(10, 10, somar) # O resultado da operação é = 20
+exibir_resultado(10, 10, subtrair) # O resultado da operação é = 0
+~~~
+
+### _Escopo local e escopo global_
+
+Python trabalha com escopo local e global. Dentro do bloco da função o escopo é local. Portanto, alterações ali feitas em objetos imutáveis serão perdidas quando o método terminar de ser executado. Para usar objetos globais utilizamos a palavra-chave `global`, que informa ao interpretador que a variável que está sendo manipulada no escopo local é global. Essa **NÃO é uma boa prática e deve ser evitada**.
+
+~~~python
+salario = 2000
+
+def salario_bonus(bonus):
+    global salario
+    salario += bonus
+    return salario
+
+salario_com_bonus = salario_bonus(500) # 2500
+
+print(salario_com_bonus)
+~~~
