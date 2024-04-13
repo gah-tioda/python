@@ -38,3 +38,25 @@ if isinstance(p, Pessoa):
 ~~~
 
 Mais exemplos em: [Python: Aprenda a usar a função isinstance para verificar tipos de dados](https://awari.com.br/python-aprenda-a-usar-a-funcao-isinstance-para-verificar-tipos-de-dados/?utm_source=blog&utm_campaign=projeto+blog&utm_medium=Python:%20Aprenda%20a%20usar%20a%20fun%C3%A7%C3%A3o%20isinstance%20para%20verificar%20tipos%20de%20dados)
+
+`map()`
+
+Essa função executa uma outra função para cada item em um objeto iterável. Exemplo:
+
+A função map no exemplo abaixo está aplicando o `int` para cada valor recebido no `input`.
+
+~~~python
+capacidade_atual, aumento_percentual = map(int, input().split(" "))
+~~~
+
+[Python map() Function](https://www.w3schools.com/python/ref_func_map.asp)
+
+`split()`
+
+A função divide uma string em uma lista baseado no separador entre cada elemento informado como parâmetro. No exemplo abaixo usamos um espaço.
+
+~~~python
+capacidade_atual, aumento_percentual = map(int, input().split(" "))
+~~~
+
+[Python String split() Method](https://www.w3schools.com/python/ref_string_split.asp)
